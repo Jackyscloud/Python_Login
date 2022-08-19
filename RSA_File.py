@@ -223,7 +223,7 @@ def run0():
         
         if (status == 0): print("no data in database")
 
-        person = Student("10828152", "Psptim53")
+        person = Student("10897545", "abcdefg")
 
         flag = Write_and_Export().check_exist(person.user)
 
