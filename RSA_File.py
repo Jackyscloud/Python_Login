@@ -197,13 +197,21 @@ class Write_and_Export:
         
         Datas = self.export()
 
-        for i in range(0, len(Datas)):
+        try:
 
-            if (Datas[i].user == ID):
-                print("Is locate at ", i)
-                return i
+            for i in range(0, len(Datas)):
 
-        return False
+                if (Datas[i].user == ID):
+                    print("Is locate at ", i)
+                    return i
+
+            return False
+        
+        except:
+
+            print("Database is empty\n")
+            return False
+
 
 def run0():
         #print("Building")
@@ -223,7 +231,7 @@ def run0():
         
         if (status == 0): print("no data in database")
 
-        person = Student("10897545", "abcdefg")
+        person = Student("10828152", "Psptim54")
 
         flag = Write_and_Export().check_exist(person.user)
 
@@ -247,5 +255,5 @@ def run1():
     #FileControl.write_file(All_decrypted[0])
     return All_decrypted
 
-#run0()
+run0()
 #run1()
